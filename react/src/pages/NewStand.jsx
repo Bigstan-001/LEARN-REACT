@@ -1,3 +1,7 @@
-export default function NewStand() {
-  return <h1>Our News Today</h1>;
-}
+import React from "react";
+
+const NewStand = () => {
+  return <div>NewStand</div>;
+};
+
+export default NewStand;
