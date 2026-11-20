@@ -1,3 +1,7 @@
-export default function Basket() {
-  return <h1>Grocery!</h1>;
-}
+import React from "react";
+
+const Basket = () => {
+  return <div>Basket</div>;
+};
+
+export default Basket;
