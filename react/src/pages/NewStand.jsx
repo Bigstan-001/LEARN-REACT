@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+// <<<<<<< HEAD
 export default function NewStand() {
   return (
     <div>
@@ -9,12 +9,8 @@ export default function NewStand() {
     </div>
   );
 }
-=======
-import React from "react";
+// import React from "react";
 
-const NewStand = () => {
-  return <div>NewStand</div>;
-};
-
-export default NewStand;
->>>>>>> 982dba57cb68f20ed6c048ff20e20516e98c6850
+// const NewStand = () => {
+//   return <div>NewStand</div>;
+// };
