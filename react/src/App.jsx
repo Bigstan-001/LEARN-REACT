@@ -1,40 +1,31 @@
-import { useState } from "react";
-import heroImg from "./assets/hero.png";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import "./App.css";
-
-import Header from "./components/Header";
-import { products, user } from "./data/product";
-import Myinfo from "./components/Myinfo";
-
-import { BrowserRouter, Routes, Route } from "react-router";
+import { Routes, Route } from "react-router";
 import About from "./pages/About";
 import MyProfile from "./pages/MyProfile";
 import NewStand from "./pages/NewStand";
 import Shop from "./pages/Shop";
 import Basket from "./pages/Basket";
+import HomePage from "./pages/HomePage";
+import HomeLayout from "./layouts/HomeLayout";
+import DashboardLayout from "./layouts/DashboardLayout";
+import Overview from "./components/dashboard/Overview";
+import Users from "./components/dashboard/Users";
 
 function App() {
-  // const listItems = products.map((product) => (
-  //   <li key={product.id}>{product.title}</li>
-  // ));
-
   return (
-    <BrowserRouter>
-      <div>
-        <Header />
-        <Myinfo />
-      </div>
-
-      <Routes>
+    <Routes>
+      <Route element={<HomeLayout />}>
+        <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/myprofile" element={<MyProfile />} />
+        <Route path="/profile" element={<MyProfile />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/newstand" element={<NewStand />} />
-        <Route path="/basket" element={<Basket />} />
-      </Routes>
-    </BrowserRouter>
+        <Route path="/news-tand" element={<NewStand />} />
+        <Route path="/dashboard" />
+      </Route>
+      <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route index element={<Overview />} />
+        <Route path="/dashboard/users" element={<Users />} />
+      </Route>
+    </Routes>
   );
 }
 

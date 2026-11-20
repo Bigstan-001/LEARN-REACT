@@ -1,3 +1,7 @@
-export default function MyProfile() {
-  return <h1>My first profile</h1>;
-}
+import React from "react";
+
+const MyProfile = () => {
+  return <div>MyProfile</div>;
+};
+
+export default MyProfile;
